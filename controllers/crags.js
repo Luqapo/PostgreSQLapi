@@ -14,7 +14,7 @@ exports.getRegion = async (req, res, next) => {
 
 exports.getRejon = async (req, res, next) => {
     try {
-    const rejony = await Rejon.findAll({where: { regionId: req.params.regionId }, include: [{model: Region}]});
+    const rejony = await Rejon.findAll({where: { regionId: req.params.regionId }, include: [{ model: Region }]});
     res.status(200).send(rejony);
     } catch (err) {
         console.log(err);
