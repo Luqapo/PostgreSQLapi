@@ -2,4 +2,4 @@
 
 Simple Api.
 
-Technology used: Express, Seqelize, PostgreSQL 
+Technology used: Node.js, Express, Seqelize, PostgreSQL 
