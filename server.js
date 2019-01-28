@@ -2,6 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const env = require('dotenv/config');
+const morgan = require('morgan');
+const fs = require('fs');
+const path = require('path');
+const helmet = require('helmet');
 
 const sequelize = require('./util/database');
 const Region = require('./models/region');
@@ -13,8 +17,14 @@ const userRoutes = require('./routes/user');
 const cragsRoutes = require('./routes/crags');
 
 const PORT = process.env.PORT || 3000;
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {
+    flags: 'a'
+});
 
 const app = express();
+
+app.use(helmet());
+app.use(morgan('combined', { stream: accessLogStream }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -29,7 +39,7 @@ Route.belongsTo(Skala);
 
 sequelize
     .sync()
-    .then( res => {
+    .then(res => {
         app.listen(PORT, () => {
             console.log(`Server listen at port ${PORT}`);
         });
