@@ -42,8 +42,11 @@ sequelize
     .then(res => {
         app.listen(PORT, () => {
             console.log(`Server listen at port ${PORT}`);
+            app.emit("appStarted");
         });
     })
     .catch(err => {
         console.log(err);
     });
+
+module.exports = app;
