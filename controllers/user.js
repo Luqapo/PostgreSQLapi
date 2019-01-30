@@ -15,7 +15,7 @@ exports.registerUser = async (req, res, next) => {
     } catch (err) {
         console.log(err);
     }
-}
+};
 
 exports.getUsers = async (req, res, next) => {
     try {
@@ -23,5 +23,16 @@ exports.getUsers = async (req, res, next) => {
         res.status(200).send(users);
     } catch (err) {
         console.log(err);
+    }
+};
+
+exports.getQueryString = async (req, res, next) => {
+    try {
+        // localhost:5000/api/auth/params?pierwsze=100&drugie=dwa
+        console.log(req.query, req.query.pierwsze, req.query.drugie);
+        const queryString = req.query;
+        res.status(200).send(queryString);
+    } catch (err) {
+        res.status(500).send({message: "Erroron the server", err});
     }
 }

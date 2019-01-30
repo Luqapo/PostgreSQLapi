@@ -16,5 +16,9 @@ describe("App started", () => {
             .get('/api/auth/user')
             .expect('Content-Type', /json/)
             .expect(200)
-    })
-})
+            .end((err) => {
+                if (err) return done(err);
+                done();
+            });
+    });
+});

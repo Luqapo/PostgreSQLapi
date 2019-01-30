@@ -8,4 +8,6 @@ router.post('/user', userController.registerUser);
 
 router.get('/user',userController.getUsers);
 
+router.get('/params', userController.getQueryString)
+
 module.exports = router;
