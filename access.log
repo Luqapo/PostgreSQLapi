@@ -9,3 +9,7 @@
 ::1 - - [30/Jan/2019:17:11:56 +0000] "GET /api/auth/params?pierwsze=100&drugie=dwa HTTP/1.1" 200 33 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/71.0.3578.98 Chrome/71.0.3578.98 Safari/537.36"
 ::1 - - [30/Jan/2019:17:13:22 +0000] "GET /api/auth/params?pierwsze=100&drugie=dwa$trzecie=trzystacztery HTTP/1.1" 200 55 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/71.0.3578.98 Chrome/71.0.3578.98 Safari/537.36"
 ::1 - - [30/Jan/2019:17:13:32 +0000] "GET /api/auth/params?pierwsze=100&drugie=dwa&trzecie=trzystacztery HTTP/1.1" 200 59 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/71.0.3578.98 Chrome/71.0.3578.98 Safari/537.36"
+::ffff:127.0.0.1 - - [30/Jan/2019:20:26:48 +0000] "GET /api/auth/user HTTP/1.1" 200 344 "-" "node-superagent/3.8.3"
+::ffff:127.0.0.1 - - [10/Feb/2019:20:59:48 +0000] "GET /api/auth/user HTTP/1.1" 200 344 "-" "node-superagent/3.8.3"
+::ffff:127.0.0.1 - - [10/Feb/2019:21:01:07 +0000] "GET /api/auth/user HTTP/1.1" 200 344 "-" "node-superagent/3.8.3"
+::1 - - [10/Feb/2019:21:02:24 +0000] "GET /api/auth/user HTTP/1.1" 200 344 "-" "PostmanRuntime/7.6.0"
